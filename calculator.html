@@ -4,7 +4,7 @@
 </head>
 <body>
   <div class="calculator">
-    <h6 style="color: black;padding-left: 15px;">MCACalcfx54</h6>
+    <h6 style="color: black;padding-left: 15px;" id="mca">MCACalcfx54</h6>
 
     <input type="text" id="result" class="display">
     <div class="keys">
@@ -174,6 +174,9 @@
           console.log('log')
       }
   },500)
+  setTimeout(()=>{
+      document.getElementById('mca').innerHTML=" ";
+  },4000)
   
   function dis(val) 
          { 
