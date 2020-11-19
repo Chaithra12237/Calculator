@@ -1,0 +1,219 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h6 style="color: black;padding-left: 15px;">MCACalcfx54</h6>
+
+    <input type="text" id="result" class="display">
+    <div class="keys">
+        <div class="row">
+            <button value="ON" onclick="clr()" class="banner">ON</button>
+            <button value="OFF" onclick="color()" class="banner">OFF</button>
+            <button value="CLR" onclick="clr()" class="banner">CLR</button>
+            <h6 style="color: black;padding: 15px;">MCACalc</h6>
+          </div>
+          
+      <div class="row">
+        <button value="1" onclick="dis('1')"><span id="1">One</span></button>
+        <button value="2" onclick="dis('2')"><span id="2">Two</span></button>
+        <button value="3" onclick="dis('3')"><span id="3">Three</span></button>
+        <button value="+" onclick="dis('+')" class="operator">+</button>
+      </div>
+      <div class="row">
+        <button value="4" onclick="dis('4')"><span id="4">Four</span></button>
+        <button value="5" onclick="dis('5')"><span id="5">Five</span></button>
+        <button value="6" onclick="dis('6')"><span id="6">Six</span></button>
+        <button value="-" onclick="dis('-')" class="operator">-</button>
+      </div>
+      <div class="row">
+        <button value="7" onclick="dis('7')"><span id="7">Seven</span></button>
+        <button value="8" onclick="dis('8')" ><span id="8">Eight</span></button>
+        <button value="9" onclick="dis('9')"><span id="9">Nine</span></button>
+        <button value="*" onclick="dis('*')" class="operator">*</button>
+      </div>
+      <div class="row">
+        <button value="." onclick="dis('.')" class="operator">.</button>
+        <button value="0" onclick="dis('0')"><span id="0">Zero</span></button>
+        <button value="=" onclick="solve()" class="operator">=</button>
+        <button value="/" onclick="dis('/')" class="operator">/</button>
+      </div>
+    </div>
+
+  </div>
+  
+  <script type="text/javascript">
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('1')
+      if(element.innerHTML == 'One'){
+          element.innerHTML='1'
+      }
+      else if(element.innerHTML == '1'){
+          element.innerHTML='One'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('2')
+      if(element.innerHTML == 'Two'){
+          element.innerHTML='2'
+      }
+      else if(element.innerHTML == '2'){
+          element.innerHTML='Two'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('3')
+      if(element.innerHTML == 'Three'){
+          element.innerHTML='3'
+      }
+      else if(element.innerHTML == '3'){
+          element.innerHTML='Three'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('4')
+      if(element.innerHTML == 'Four'){
+          element.innerHTML='4'
+      }
+      else if(element.innerHTML == '4'){
+          element.innerHTML='Four'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('5')
+      if(element.innerHTML == 'Five'){
+          element.innerHTML='5'
+      }
+      else if(element.innerHTML == '5'){
+          element.innerHTML='Five'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('6')
+      if(element.innerHTML == 'Six'){
+          element.innerHTML='6'
+      }
+      else if(element.innerHTML == '6'){
+          element.innerHTML='Six'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('7')
+      if(element.innerHTML == 'Seven'){
+          element.innerHTML='7'
+      }
+      else if(element.innerHTML == '7'){
+          element.innerHTML='Seven'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('8')
+      if(element.innerHTML == 'Eight'){
+          element.innerHTML='8'
+      }
+      else if(element.innerHTML == '8'){
+          element.innerHTML='Eight'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('9')
+      if(element.innerHTML == 'Nine'){
+          element.innerHTML='9'
+      }
+      else if(element.innerHTML == '9'){
+          element.innerHTML='Nine'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  setInterval(()=>{
+      console.log('log')
+      let element=document.getElementById('0')
+      if(element.innerHTML == 'Zero'){
+          element.innerHTML='0'
+      }
+      else if(element.innerHTML == '0'){
+          element.innerHTML='Zero'
+      }
+      else{
+          console.log('log')
+      }
+  },500)
+  
+  function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+         function color()
+         {
+             document.getElementById('1').style.color="white"
+             document.getElementById('1').style.background="black"
+             document.getElementById('2').style.color="white"
+             document.getElementById('2').style.background="black"
+             document.getElementById('3').style.color="white"
+             document.getElementById('3').style.background="black"
+             document.getElementById('4').style.color="white"
+             document.getElementById('4').style.background="black"
+             document.getElementById('5').style.color="white"
+             document.getElementById('5').style.background="black"
+             document.getElementById('6').style.color="white"
+             document.getElementById('6').style.background="black"
+             document.getElementById('7').style.color="white"
+             document.getElementById('7').style.background="black"
+             document.getElementById('8').style.color="white"
+             document.getElementById('8').style.background="black"
+             document.getElementById('9').style.color="white"
+             document.getElementById('9').style.background="black"
+             document.getElementById('0').style.color="white"
+             document.getElementById('0').style.background="black"
+
+         }
+
+</script>
+</body>
+</html>
